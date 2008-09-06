@@ -9,6 +9,8 @@ Installation
 
 Boxover is GPL-Licensed(*) and is *not* included it in this repository, so:
 
+* according to http://boxover.swazz.org/forum/license-question-t243-1.html
+
 (0) Be sure you agree with the GPL terms, such as the obligation of releasing 
     your software also under GPL, otherwise contact the boxover author.  
 
@@ -30,8 +32,6 @@ Example Usage
     image_tag "source", :title => boxover("body", "header", 
                                           :fade => true, 
                                           :delay => 0.5)
-
-(*) according to http://boxover.swazz.org/forum/license-question-t243-1.html
 
 License terms
 =============
