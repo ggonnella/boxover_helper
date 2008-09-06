@@ -4,12 +4,16 @@ Note: I am not related to the development of boxover, which itself does not
 seem to be in active development (last update was in 2006). Boxover 
 has a forum for bug reports, suggestions, etc at http://boxover.swazz.org/forum/
 
-According to the answer to: http://boxover.swazz.org/forum/license-question-t243-1.html
-its license can be considered to be a GPL. However I did not include it in this 
-repository, so:
+Installation
+============
+
+Boxover is GPL-Licensed(*) and is *not* included it in this repository, so:
+
+(0) Be sure you agree with the GPL terms, such as the obligation of releasing 
+    your software also under GPL, otherwise contact the boxover author.  
 
 (1) Dowload the last version of boxover.js from http://boxover.swazz.org 
-    and install it in the public/javascripts 
+    and install it in the public/javascripts directory.
 
 (2) Add <%= javascript_include_tag("boxover.js") -%> to your layout.
 
@@ -18,11 +22,23 @@ repository, so:
 (4) Use the boxover helper to add tooltips using the title tag. 
     (see lib/helpers/boxover_helper.rb)
 
-e.g. 
+(5) Feel free to define other default values in the plugin "boxover_helper.rb".
+
+Example Usage
+============= 
     
     image_tag "source", :title => boxover("body", "header", 
                                           :fade => true, 
                                           :delay => 0.5)
+
+(*) according to http://boxover.swazz.org/forum/license-question-t243-1.html
+
+License terms
+=============
+
+Double license: MIT/GPL.
                                           
-The helper is MIT-Licensed
-(C) Giorgio Gonnella, 2008 <sprintf("ggonnell%syahoo.it",'@')>
+If you release your software and use boxover in it, probably 
+the whole application is to be released under GPL. In that 
+case you can consider this plugin as under the same 
+GPL license as boxover.
