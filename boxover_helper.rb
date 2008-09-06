@@ -102,9 +102,14 @@ module BoxoverHelper
     options.reverse_merge!(Defaults)
     
     # allow to specify boolean options using rails style (=> true / => false)
+    bool_options = [:windowlock, :doubleclickstop, :singleclickstop, 
+                    :requireclick, :hideselects, :fade]
+    
     options.each_pair do |k,v| 
-      options[k]="on"  if v == true
-      options[k]="off" if v == false or v.nil?
+      if bool_options.include?(k)
+        options[k]="on"  if v == true
+        options[k]="off" if v == false or v.nil?
+      end 
     end
     
     # [ ] in a string would cause boxover to fail
